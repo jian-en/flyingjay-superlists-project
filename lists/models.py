@@ -2,9 +2,9 @@ from django.db import models
 
 
 class List(models.Model):
-    pass
+    id = models.AutoField(primary_key=True)
 
 
 class Item(models.Model):
     text = models.TextField(default='')
-    list = models.ForeignKey(List, default=None)
+    list = models.ForeignKey(List)
